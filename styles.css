@@ -1,0 +1,131 @@
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(227, 227, 227, 1);
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, 
+              rgba(0, 0, 0, 0.07) 0px 2px 4px,
+              rgba(0, 0, 0, 0.07) 0px 4px 8px;
+  display: none;
+  pointer-events: none;
+  max-width: 20%;
+  z-index: 1000;
+}
+
+.tooltip-content {
+  position: relative;
+  z-index: 1;
+}
+
+.tooltip-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 8px;
+  border-radius: 2px;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+  line-height: 1,6;
+  color: black;
+  background-color: rgb(185, 185, 185);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  background-color: rgb(185, 185, 185);
+}
+
+nav a {
+  display: inline-block;
+  min-width: 9rem;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: #555;
+}
+
+nav a[aria-current='page'] {
+  color: #000;
+  background-color: #d4d4d4;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+}
+
+h1 {
+  font-family: "Anton", serif;
+  font-size: 10rem;
+  line-height: 1;
+  margin: 20px 0;
+  padding: 1rem;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+  h1 {
+      font-size: 5rem;
+  }
+
+  p {
+      padding: 0 10px;
+  }
+
+  nav {
+      flex-direction: column;
+  }
+
+  nav a {
+      padding: 10px;
+      text-align: center;
+  }
+
+  button {
+      width: 100%;
+      font-size: 1.2rem;
+  }
+  .tippy-box {
+    background-color: rgba(227, 227, 227, 1);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    max-width: 50%;
+    height: auto;
+  }
+}
